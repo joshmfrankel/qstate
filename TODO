@@ -1,0 +1,52 @@
+Pages:
+  ☐ Home
+  ☐ Contact (megan)
+  ☐ FAQ
+  ☐ Conference Schedule
+  ☐ Blog (bonus otherwise link)
+  ☐ Proposal Form (bonus)
+  ☐ Registration Form (bonus)
+
+Features:
+  ☐ Registration Form
+    ☐ Name
+    ☐ Email
+    ☐ School (radio of 5)
+    ☐ Presenter (radio yes/no)
+    ☐ Food Alergies (textarea - optional)
+    ☐ Days attending (fluff)
+    ☐ Housing needed? (radio yes/no)
+      ☐ Sub section for housing (toggle open / close)
+        ☐ Animal Allergies (dogs/cats)
+        ☐ Smoking? (yes/no)
+        ☐ Can stay with male, female, married, couple?
+        ☐ Will sleep on? (bed, futon, floor)
+    ☐ Additional Information
+
+ ☐ Proposal Form
+   ☐ Leader Presenter
+   ☐ Co-presenter (bonus dynamically created on plus sign click)
+   ☐ Email
+   ☐ School
+   ☐ Credentials (textfield)
+   ☐ Type of presentation (radio: roundtable, poster, presentation)
+     ☐ Tooltip (explanation of presentation types)
+   ☐ Title of presentation (textfield)
+   ☐ Summary of presentation (250 words textarea)
+   ☐ Abstract (textarea)
+   ☐ Additional Information (textarea)
+
+ ☐ Conference Schedule
+   ☐ Basic - PDF link opens in Browser
+   ☐ Ideal - HTML table schedule that josh makes
+   ☐ (wont be available Jan 2015)
+
+ ☐ FAQ
+   ☐ Toggle sections
+
+ ☐ Blog
+
+ ☐ Contact Form
+   ☐ Name
+   ☐ Email
+   ☐ Questions / Concerns
