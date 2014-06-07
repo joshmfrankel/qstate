@@ -10,6 +10,11 @@ describe "Static pages" do
             expect(page).to have_content('Home')
         end
 
+        it "should have the title 'Home'" do
+          visit '/static_pages/home'
+          expect(page).to have_title("Home | Quint State Conference at UGA")
+        end
+
     end
 
     # Contact
