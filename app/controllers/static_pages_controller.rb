@@ -14,6 +14,6 @@ class StaticPagesController < ApplicationController
   def proposal
   end
 
-  def register
+  def registration
   end
 end
