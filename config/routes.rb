@@ -1,15 +1,22 @@
 Qstate::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/contact"
-  get "static_pages/faq"
-  get "static_pages/schedule"
-  get "static_pages/proposal"
-  get "static_pages/registration"
+  #get "static_pages/home"
+  #get "static_pages/contact"
+  #get "static_pages/faq"
+  #get "static_pages/schedule"
+  #get "static_pages/proposal"
+  #get "static_pages/registration"
+
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/faq', to: 'static_pages#faq', via: 'get'
+  match '/schedule', to: 'static_pages#schedule', via: 'get'
+  match '/proposal', to: 'static_pages#proposal', via: 'get'
+  match '/registration', to: 'static_pages#registration', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

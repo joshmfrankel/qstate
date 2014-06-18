@@ -8,18 +8,18 @@ describe "Static pages" do
     # Home Page
     describe "Home page" do
 
+        # Home Visit
+        before { visit root_path }
+
         it "should have the content 'Home'" do
-            visit '/static_pages/home'
             expect(page).to have_content('Home')
         end
 
         it "should have the base title" do
-          visit '/static_pages/home'
           expect(page).to have_title("#{base_title}")
         end
 
         it "should not have the title 'Home'" do
-          visit '/static_pages/home'
           expect(page).not_to have_title("Home |")
         end
 
@@ -29,12 +29,12 @@ describe "Static pages" do
     describe "Contact page" do
 
         it "should have the content 'Contact'" do
-            visit '/static_pages/contact'
+            visit contact_path
             expect(page).to have_content('Contact')
         end
 
         it "should have the title 'Contact Us'" do
-          visit '/static_pages/contact'
+          visit contact_path
           expect(page).to have_title("Contact Us | #{base_title}")
         end
 
@@ -44,12 +44,12 @@ describe "Static pages" do
     describe "FAQ page" do
 
         it "should have the content 'FAQ'" do
-            visit '/static_pages/faq'
+            visit faq_path
             expect(page).to have_content('FAQ')
         end
 
         it "should have the title 'FAQ'" do
-          visit '/static_pages/faq'
+          visit faq_path
           expect(page).to have_title("FAQ | #{base_title}")
         end
 
@@ -59,12 +59,12 @@ describe "Static pages" do
     describe "Proposal page" do
 
         it "should have the content 'Proposal'" do
-            visit '/static_pages/proposal'
+            visit proposal_path
             expect(page).to have_content('Proposal')
         end
 
         it "should have the title 'Proposal'" do
-          visit '/static_pages/proposal'
+          visit proposal_path
           expect(page).to have_title("Proposal | #{base_title}")
         end
 
@@ -74,12 +74,12 @@ describe "Static pages" do
     describe "Registration page" do
 
         it "should have the content 'Registration'" do
-            visit '/static_pages/registration'
+            visit registration_path
             expect(page).to have_content('Registration')
         end
 
         it "should have the title 'Registration'" do
-          visit '/static_pages/registration'
+          visit registration_path
           expect(page).to have_title("Registration | #{base_title}")
         end
 
