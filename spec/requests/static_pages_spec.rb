@@ -2,86 +2,72 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-    # Set the base title for everypage
-    let(:base_title) { "Quint State Conference at UGA" }
+    # Set the subject to the actual page
+    subject { page }
 
     # Home Page
     describe "Home page" do
 
-        # Home Visit
+        # Before test visit the root
         before { visit root_path }
 
-        it "should have the content 'Home'" do
-            expect(page).to have_content('Home')
-        end
-
-        it "should have the base title" do
-          expect(page).to have_title("#{base_title}")
-        end
-
-        it "should not have the title 'Home'" do
-          expect(page).not_to have_title("Home |")
-        end
+        it { should have_content('Home') }
+        it { should have_title(full_title('')) }
+        it { should_not have_title("Home |") }
 
     end
 
     # Contact
     describe "Contact page" do
 
-        it "should have the content 'Contact'" do
-            visit contact_path
-            expect(page).to have_content('Contact')
-        end
+        # Before test visit contact page
+        before { visit contact_path }
 
-        it "should have the title 'Contact Us'" do
-          visit contact_path
-          expect(page).to have_title("Contact Us | #{base_title}")
-        end
+        it { should have_content('Contact') }
+        it { should have_title(full_title('Contact Us')) }
 
     end
 
     # FAQ
     describe "FAQ page" do
 
-        it "should have the content 'FAQ'" do
-            visit faq_path
-            expect(page).to have_content('FAQ')
-        end
+        # Before test visit contact page
+        before { visit faq_path }
 
-        it "should have the title 'FAQ'" do
-          visit faq_path
-          expect(page).to have_title("FAQ | #{base_title}")
-        end
+        it { should have_content('FAQ') }
+        it { should have_title(full_title('FAQ')) }
 
     end
 
     # Proposal Page
     describe "Proposal page" do
 
-        it "should have the content 'Proposal'" do
-            visit proposal_path
-            expect(page).to have_content('Proposal')
-        end
+        # Before test visit contact page
+        before { visit proposal_path }
 
-        it "should have the title 'Proposal'" do
-          visit proposal_path
-          expect(page).to have_title("Proposal | #{base_title}")
-        end
+        it { should have_content('Proposal') }
+        it { should have_title(full_title('Proposal')) }
 
     end
 
     # Registration Page
     describe "Registration page" do
 
-        it "should have the content 'Registration'" do
-            visit registration_path
-            expect(page).to have_content('Registration')
-        end
+        # Before test visit contact page
+        before { visit registration_path }
 
-        it "should have the title 'Registration'" do
-          visit registration_path
-          expect(page).to have_title("Registration | #{base_title}")
-        end
+        it { should have_content('Registration') }
+        it { should have_title(full_title('Registration')) }
+
+    end
+
+    describe "Schedule page" do
+
+        # Before test visit schedule page
+        before { visit schedule_path }
+
+        it { should have_content('Schedule') }
+        it { should have_title(full_title('Schedule')) }
 
     end
 
