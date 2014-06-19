@@ -1,4 +1,5 @@
 Qstate::Application.routes.draw do
+  #get "users/new"
   #get "static_pages/home"
   #get "static_pages/contact"
   #get "static_pages/faq"
@@ -6,6 +7,10 @@ Qstate::Application.routes.draw do
   #get "static_pages/proposal"
   #get "static_pages/registration"
 
+  # User Model
+  match '/signup', to: 'users#new', via: 'get'
+
+  # Static Pages
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/faq', to: 'static_pages#faq', via: 'get'
   match '/schedule', to: 'static_pages#schedule', via: 'get'
