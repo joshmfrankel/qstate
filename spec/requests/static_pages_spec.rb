@@ -5,14 +5,26 @@ describe "Static pages" do
     # Set the subject to the actual page
     subject { page }
 
+    # Shared examples
+    shared_examples_for "all static pages" do
+        it { should have_selector('h1', text: heading) }
+        it { should have_title(full_title(page_title)) }
+    end
+
     # Home Page
     describe "Home page" do
 
         # Before test visit the root
         before { visit root_path }
 
-        it { should have_selector('h1', text: 'Quint State Conference at UGA') }
-        it { should have_title(full_title('')) }
+        # local variables
+        let(:heading)    { 'Quint State Conference at UGA' }
+        let(:page_title) { '' }
+
+        # run the shared example
+        it_should_behave_like "all static pages"
+
+        # other test
         it { should_not have_title("Home |") }
 
     end
@@ -23,8 +35,12 @@ describe "Static pages" do
         # Before test visit contact page
         before { visit contact_path }
 
-        it { should have_selector('h1', text: 'Contact') }
-        it { should have_title(full_title('Contact Us')) }
+        # local variables
+        let(:heading)       { 'Contact' }
+        let(:page_title)    { 'Contact Us' }
+
+        # run the shared example
+        it_should_behave_like "all static pages"
 
     end
 
@@ -34,8 +50,12 @@ describe "Static pages" do
         # Before test visit contact page
         before { visit faq_path }
 
-        it { should have_selector('h1', text: 'FAQ') }
-        it { should have_title(full_title('FAQ')) }
+        # local variables
+        let(:heading)       { 'FAQ' }
+        let(:page_title)    { 'FAQ' }
+
+        # run the shared example
+        it_should_behave_like "all static pages"
 
     end
 
@@ -45,8 +65,12 @@ describe "Static pages" do
         # Before test visit contact page
         before { visit proposal_path }
 
-        it { should have_selector('h1', text: 'Proposal') }
-        it { should have_title(full_title('Proposal')) }
+        # local variables
+        let(:heading)       { 'Proposal' }
+        let(:page_title)    { 'Proposal' }
+
+        # run the shared example
+        it_should_behave_like "all static pages"
 
     end
 
@@ -56,8 +80,12 @@ describe "Static pages" do
         # Before test visit contact page
         before { visit registration_path }
 
-        it { should have_selector('h1', text: 'Registration') }
-        it { should have_title(full_title('Registration')) }
+        # local variables
+        let(:heading)       { 'Registration' }
+        let(:page_title)    { 'Registration' }
+
+        # run the shared example
+        it_should_behave_like "all static pages"
 
     end
 
@@ -66,9 +94,40 @@ describe "Static pages" do
         # Before test visit schedule page
         before { visit schedule_path }
 
-        it { should have_selector('h1', text: 'Schedule') }
-        it { should have_title(full_title('Schedule')) }
+        # local variables
+        let(:heading)       { 'Schedule' }
+        let(:page_title)    { 'Schedule' }
 
+        # run the shared example
+        it_should_behave_like "all static pages"
+
+    end
+
+    # Test links of layout
+    it "should have the right links on the layout" do
+
+        # visit home
+        visit root_path
+
+        # Check Registration
+        click_link "Registration"
+        expect(page).to have_title(full_title('Registration'))
+
+        # Check Proposal
+        click_link "Proposal"
+        expect(page).to have_title(full_title('Proposal'))
+
+        # Schedule
+        click_link "Schedule"
+        expect(page).to have_title(full_title('Schedule'))
+
+        # FAQ
+        click_link "FAQ"
+        expect(page).to have_title(full_title('FAQ'))
+
+        # Contact Not working?
+        #click_link contact_path
+        #expect(page).to have_title(full_title('Contact Us'))
     end
 
 end
