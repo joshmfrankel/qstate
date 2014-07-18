@@ -1,3 +1,5 @@
+# include ApplicationHelper
+
 # Title Helper
 def full_title(page_title)
     base_title = "Quint State Conference at UGA"
