@@ -3,7 +3,10 @@ require 'spec_helper'
 describe User do
 
     # Before runs code block before each example
-    before { @user = User.new(name: "Example User", email: "user@example.com") }
+    before do
+       @user = User.new(name: "Example User", email: "user@example.com",
+                        password: "foobar", password_confirmation: "foobar")
+     end
 
     # Subjet makes the @user the default subject of the test
     subject { @user }
@@ -11,6 +14,9 @@ describe User do
     # Initial model test
     it { should respond_to(:name) }
     it { should respond_to(:email) }
+    it { should respond_to(:password_digest) }
+    it { should respond_to(:password) }
+    it { should respond_to(:password_confirmation) }
 
     # Check for a valid @user obj (sanity-check)
     it { should be_valid }
@@ -58,6 +64,16 @@ describe User do
                 expect(@user).to be_valid
             end
         end
+    end
+
+    describe "when email address is already taken" do
+        before do
+            user_with_same_email = @user.dup
+            user_with_same_email.email = @user.email.upcase
+            user_with_same_email.save
+        end
+
+        it { should_not be_valid }
     end
 
 end
