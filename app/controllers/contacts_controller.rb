@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
 
-        ContactMailer.thank_you('josh')
+        ContactMailer.thank_you('josh').deliver
 
         format.html { redirect_to '/contact_us', notice: 'Email successfully sent.' }
         format.json { render action: 'new', status: :created, location: @contact }
