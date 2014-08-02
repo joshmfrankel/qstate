@@ -7,7 +7,7 @@ class Proposal < ActiveRecord::Base
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
     validates :lead_presenter, presence: true, length: { maximum: 50 }
-    validates :email, presence: true, length: { maximum: 75 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+    validates :email, presence: true, length: { maximum: 75 }, format: { with: VALID_EMAIL_REGEX }
     validates :school, presence: true
     validates :presentation_type, presence: true
     validates :title, presence: true

@@ -28,8 +28,9 @@ class ProposalsController < ApplicationController
 
     respond_to do |format|
       if @proposal.save
-        format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @proposal }
+
+        format.html { redirect_to '/submit/proposal', notice: 'Proposal was successfully submitted.' }
+        format.json { render action: 'new', status: :created, location: @proposal }
       else
         format.html { render action: 'new' }
         format.json { render json: @proposal.errors, status: :unprocessable_entity }

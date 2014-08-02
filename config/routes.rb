@@ -1,4 +1,6 @@
 Qstate::Application.routes.draw do
+  resources :contacts
+
   resources :proposals
 
   resources :registrations
@@ -14,12 +16,12 @@ Qstate::Application.routes.draw do
   # proposal path
   match '/submit/proposal', to: 'proposals#new', via: 'get'
   match '/submit/registration', to: 'registrations#new', via: 'get'
+  match '/contact_us', to: 'contacts#new', via: 'get'
 
   # User Model
   match '/signup', to: 'users#new', via: 'get'
 
   # Static Pages
-  match '/contact', to: 'static_pages#contact', via: 'get'
   match '/faq', to: 'static_pages#faq', via: 'get'
   match '/schedule', to: 'static_pages#schedule', via: 'get'
 
