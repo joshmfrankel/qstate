@@ -2,6 +2,10 @@
 
 A ruby on rails website for the 2014 MFT Quint State conference.
 
+## Server Info  
+
+[Heroku Site](http://uga-quint-state.herokuapp.com/)  
+
 ## Features to Implement
 
 * Proposal Form
