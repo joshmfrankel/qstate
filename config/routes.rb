@@ -77,4 +77,8 @@ Qstate::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Redirect invalid route requests
+  get '*path' => redirect('/')
+
 end
