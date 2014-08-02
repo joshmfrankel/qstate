@@ -25,16 +25,16 @@ Features:
 
  ☐ Proposal Form
    ✔ Leader Presenter @done (14-08-02 12:08)
-   ☐ Co-presenter (bonus dynamically created on plus sign click)
+   ✔ Co-presenter (bonus dynamically created on plus sign click) @done (14-08-02 12:24)
    ✔ Email @done (14-08-02 12:08)
    ✔ School @done (14-08-02 12:08)
    ✔ Credentials (textfield) @done (14-08-02 12:08)
-   ☐ Type of presentation (radio: roundtable, poster, presentation)
+   ✔ Type of presentation (radio: roundtable, poster, presentation) @done (14-08-02 12:26)
      ☐ Tooltip (explanation of presentation types)
-   ☐ Title of presentation (textfield)
-   ☐ Summary of presentation (250 words textarea)
-   ☐ Abstract (textarea)
-   ☐ Additional Information (textarea)
+   ✔ Title of presentation (textfield) @done (14-08-02 12:24)
+   ✔ Summary of presentation (250 words textarea) @done (14-08-02 12:24)
+   ✔ Abstract (textarea) @done (14-08-02 12:24)
+   ✔ Additional Information (textarea) @done (14-08-02 12:24)
 
  ☐ Conference Schedule
    ☐ Basic - PDF link opens in Browser

@@ -11,6 +11,10 @@ Qstate::Application.routes.draw do
   #get "static_pages/proposal"
   #get "static_pages/registration"
 
+  # proposal path
+  match '/submit/proposal', to: 'proposals#new', via: 'get'
+  match '/submit/registration', to: 'registrations#new', via: 'get'
+
   # User Model
   match '/signup', to: 'users#new', via: 'get'
 
