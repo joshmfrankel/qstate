@@ -1,0 +1,59 @@
+<%= form_for(@proposal) do |f| %>
+  <% if @proposal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
+
+      <ul>
+      <% @proposal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lead_presenter %><br>
+    <%= f.text_field :lead_presenter %>
+  </div>
+  <div class="field">
+    <%= f.label :co_presenter, 'Co-Presenter' %><br>
+    <%= f.text_field :co_presenter %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School' %>
+  </div>
+  <div class="field">
+    <%= f.label :credentials %><br>
+    <%= f.text_field :credentials %>
+  </div>
+  <div class="field">
+    <%= f.label :presentation_type %><br>
+    <%= f.radio_button :presentation_type, 'Roundtable' %>
+    <%= f.radio_button :presentation_type, 'Poster' %>
+    <%= f.radio_button :presentation_type, 'Presentation' %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :abstract %><br>
+    <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_information %><br>
+    <%= f.text_area :additional_information %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

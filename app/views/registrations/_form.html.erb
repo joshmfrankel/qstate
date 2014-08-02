@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :school %><br>
-    <%= f.select :school, [ 'University of Georgia', 'Tennessee Tech', 'Another School' ], :prompt => 'Choose a School' %>
+    <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School' %>
   </div>
   <div class="field">
     <%= f.label :presenter %><br>
@@ -34,9 +34,7 @@
   </div>
   <div class="field">
     <%= f.label :days_attending %><br>
-    <%= f.check_box :days_attending, :name => 'Friday' %>
-    <%= f.check_box :days_attending, :name => 'Saturday' %>
-    <%= f.check_box :days_attending, :name => 'Sunday' %>
+    <%= f.text_field :days_attending %>
   </div>
   <div class="field">
     <%= f.label :housing_needed %><br>

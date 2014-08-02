@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lead presenter:</strong>
+  <%= @proposal.lead_presenter %>
+</p>
+
+<p>
+  <strong>Co presenter:</strong>
+  <%= @proposal.co_presenter %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @proposal.email %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @proposal.school %>
+</p>
+
+<p>
+  <strong>Credentials:</strong>
+  <%= @proposal.credentials %>
+</p>
+
+<p>
+  <strong>Presentation type:</strong>
+  <%= @proposal.presentation_type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @proposal.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @proposal.summary %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @proposal.abstract %>
+</p>
+
+<p>
+  <strong>Additional information:</strong>
+  <%= @proposal.additional_information %>
+</p>
+
+<%= link_to 'Edit', edit_proposal_path(@proposal) %> |
+<%= link_to 'Back', proposals_path %>

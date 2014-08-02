@@ -1,4 +1,6 @@
 Qstate::Application.routes.draw do
+  resources :proposals
+
   resources :registrations
 
   get "users/new"
@@ -16,8 +18,6 @@ Qstate::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/faq', to: 'static_pages#faq', via: 'get'
   match '/schedule', to: 'static_pages#schedule', via: 'get'
-  match '/proposal', to: 'static_pages#proposal', via: 'get'
-  match '/registration', to: 'static_pages#registration', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

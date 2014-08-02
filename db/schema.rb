@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802131739) do
+ActiveRecord::Schema.define(version: 20140802161546) do
+
+  create_table "proposals", force: true do |t|
+    t.string   "lead_presenter"
+    t.string   "co_presenter"
+    t.string   "email",                  limit: 75
+    t.string   "school"
+    t.string   "credentials"
+    t.string   "presentation_type"
+    t.string   "title"
+    t.text     "summary"
+    t.text     "abstract"
+    t.text     "additional_information"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "registrations", force: true do |t|
     t.string   "name",                    limit: 50
@@ -25,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140802131739) do
     t.boolean  "smoking"
     t.string   "housing_residents"
     t.string   "housing_sleep_situation"
-    t.string   "additional_information"
+    t.text     "additional_information"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

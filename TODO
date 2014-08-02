@@ -14,21 +14,21 @@ Features:
     ✔ School (radio of 5) @done (14-08-02 09:14)
     ✔ Presenter (radio yes/no) @done (14-08-02 09:14)
     ✔ Food Alergies (textarea - optional) @done (14-08-02 09:15)
-    ☐ Days attending (fluff)
-    ☐ Housing needed? (radio yes/no)
-      ☐ Sub section for housing (toggle open / close)
-        ☐ Animal Allergies (dogs/cats)
-        ☐ Smoking? (yes/no)
-        ☐ Can stay with male, female, married, couple?
-        ☐ Will sleep on? (bed, futon, floor)
-    ☐ Additional Information
+    ✔ Days attending (fluff) @done (14-08-02 09:34)
+    ✔ Housing needed? (radio yes/no) @done (14-08-02 09:34)
+      ✔ Sub section for housing (toggle open / close) @done (14-08-02 09:34)
+        ✔ Animal Allergies (dogs/cats) @done (14-08-02 09:34)
+        ✔ Smoking? (yes/no) @done (14-08-02 09:44)
+        ✔ Can stay with male, female, married, couple? @done (14-08-02 09:48)
+        ✔ Will sleep on? (bed, futon, floor) @done (14-08-02 09:48)
+    ✔ Additional Information @done (14-08-02 09:48)
 
  ☐ Proposal Form
-   ☐ Leader Presenter
+   ✔ Leader Presenter @done (14-08-02 12:08)
    ☐ Co-presenter (bonus dynamically created on plus sign click)
-   ☐ Email
-   ☐ School
-   ☐ Credentials (textfield)
+   ✔ Email @done (14-08-02 12:08)
+   ✔ School @done (14-08-02 12:08)
+   ✔ Credentials (textfield) @done (14-08-02 12:08)
    ☐ Type of presentation (radio: roundtable, poster, presentation)
      ☐ Tooltip (explanation of presentation types)
    ☐ Title of presentation (textfield)

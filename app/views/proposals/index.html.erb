@@ -1,0 +1,45 @@
+<h1>Listing proposals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lead presenter</th>
+      <th>Co presenter</th>
+      <th>Email</th>
+      <th>School</th>
+      <th>Credentials</th>
+      <th>Presentation type</th>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>Abstract</th>
+      <th>Additional information</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proposals.each do |proposal| %>
+      <tr>
+        <td><%= proposal.lead_presenter %></td>
+        <td><%= proposal.co_presenter %></td>
+        <td><%= proposal.email %></td>
+        <td><%= proposal.school %></td>
+        <td><%= proposal.credentials %></td>
+        <td><%= proposal.presentation_type %></td>
+        <td><%= proposal.title %></td>
+        <td><%= proposal.summary %></td>
+        <td><%= proposal.abstract %></td>
+        <td><%= proposal.additional_information %></td>
+        <td><%= link_to 'Show', proposal %></td>
+        <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
+        <td><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proposal', new_proposal_path %>
