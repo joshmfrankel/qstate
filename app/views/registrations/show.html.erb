@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @registration.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @registration.email %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @registration.school %>
+</p>
+
+<p>
+  <strong>Presenter:</strong>
+  <%= @registration.presenter %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @registration.allergies %>
+</p>
+
+<p>
+  <strong>Days attending:</strong>
+  <%= @registration.days_attending %>
+</p>
+
+<p>
+  <strong>Housing needed:</strong>
+  <%= @registration.housing_needed %>
+</p>
+
+<p>
+  <strong>Animal allergies:</strong>
+  <%= @registration.animal_allergies %>
+</p>
+
+<p>
+  <strong>Smoking:</strong>
+  <%= @registration.smoking %>
+</p>
+
+<p>
+  <strong>Housing residents:</strong>
+  <%= @registration.housing_residents %>
+</p>
+
+<p>
+  <strong>Housing sleep situation:</strong>
+  <%= @registration.housing_sleep_situation %>
+</p>
+
+<p>
+  <strong>Additional information:</strong>
+  <%= @registration.additional_information %>
+</p>
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>

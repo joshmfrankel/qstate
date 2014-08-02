@@ -9,6 +9,10 @@ class StaticPagesController < ApplicationController
   end
 
   def schedule
+
+    @temp = Palindrome.isPalindrome('A man, a plan, a canal, Panama')
+
+    @palindrome = @temp
   end
 
   def proposal

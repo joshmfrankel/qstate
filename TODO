@@ -9,11 +9,11 @@ Pages:
 
 Features:
   ☐ Registration Form
-    ☐ Name
-    ☐ Email
-    ☐ School (radio of 5)
-    ☐ Presenter (radio yes/no)
-    ☐ Food Alergies (textarea - optional)
+    ✔ Name @done (14-08-02 09:13)
+    ✔ Email @done (14-08-02 09:14)
+    ✔ School (radio of 5) @done (14-08-02 09:14)
+    ✔ Presenter (radio yes/no) @done (14-08-02 09:14)
+    ✔ Food Alergies (textarea - optional) @done (14-08-02 09:15)
     ☐ Days attending (fluff)
     ☐ Housing needed? (radio yes/no)
       ☐ Sub section for housing (toggle open / close)

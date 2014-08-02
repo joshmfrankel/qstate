@@ -1,0 +1,70 @@
+<%= form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+      <ul>
+      <% @registration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.select :school, [ 'University of Georgia', 'Tennessee Tech', 'Another School' ], :prompt => 'Choose a School' %>
+  </div>
+  <div class="field">
+    <%= f.label :presenter %><br>
+    <%= f.radio_button :presenter, true %>
+    <%= f.radio_button :presenter, false %>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %><br>
+    <%= f.text_field :allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :days_attending %><br>
+    <%= f.check_box :days_attending, :name => 'Friday' %>
+    <%= f.check_box :days_attending, :name => 'Saturday' %>
+    <%= f.check_box :days_attending, :name => 'Sunday' %>
+  </div>
+  <div class="field">
+    <%= f.label :housing_needed %><br>
+    <%= f.radio_button :housing_needed, true %>
+    <%= f.radio_button :housing_needed, false %>
+  </div>
+  <div class="field">
+    <%= f.label :animal_allergies %><br>
+    <%= f.text_field :animal_allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :smoking %><br>
+    <%= f.radio_button :smoking, true %>
+    <%= f.radio_button :smoking, false %>
+  </div>
+  <div class="field">
+    <%= f.label :housing_residents %><br>
+    <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], :prompt => 'Choose Housing Residents' %>
+  </div>
+  <div class="field">
+    <%= f.label :housing_sleep_situation, 'Preferred Sleeping Arrangements' %><br>
+    <%= f.select :housing_sleep_situation, [ 'No Preference', 'Bed', 'Futon', 'Floor' ], :prompt => 'Choose Sleep Situation' %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_information %><br>
+    <%= f.text_area :additional_information %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

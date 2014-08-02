@@ -1,4 +1,6 @@
 Qstate::Application.routes.draw do
+  resources :registrations
+
   get "users/new"
   #get "static_pages/home"
   #get "static_pages/contact"

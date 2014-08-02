@@ -1,0 +1,49 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>School</th>
+      <th>Presenter</th>
+      <th>Allergies</th>
+      <th>Days attending</th>
+      <th>Housing needed</th>
+      <th>Animal allergies</th>
+      <th>Smoking</th>
+      <th>Housing residents</th>
+      <th>Housing sleep situation</th>
+      <th>Additional information</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registrations.each do |registration| %>
+      <tr>
+        <td><%= registration.name %></td>
+        <td><%= registration.email %></td>
+        <td><%= registration.school %></td>
+        <td><%= registration.presenter %></td>
+        <td><%= registration.allergies %></td>
+        <td><%= registration.days_attending %></td>
+        <td><%= registration.housing_needed %></td>
+        <td><%= registration.animal_allergies %></td>
+        <td><%= registration.smoking %></td>
+        <td><%= registration.housing_residents %></td>
+        <td><%= registration.housing_sleep_situation %></td>
+        <td><%= registration.additional_information %></td>
+        <td><%= link_to 'Show', registration %></td>
+        <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+        <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registration', new_registration_path %>

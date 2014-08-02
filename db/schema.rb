@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728022219) do
+ActiveRecord::Schema.define(version: 20140802131739) do
+
+  create_table "registrations", force: true do |t|
+    t.string   "name",                    limit: 50
+    t.string   "email",                   limit: 75
+    t.string   "school"
+    t.boolean  "presenter"
+    t.string   "allergies"
+    t.string   "days_attending"
+    t.boolean  "housing_needed"
+    t.string   "animal_allergies"
+    t.boolean  "smoking"
+    t.string   "housing_residents"
+    t.string   "housing_sleep_situation"
+    t.string   "additional_information"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
