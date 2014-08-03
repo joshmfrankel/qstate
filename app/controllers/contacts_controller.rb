@@ -29,7 +29,11 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
 
-        ContactMailer.thank_you('josh').deliver
+        # Send request email to the uga account
+        ContactMailer.contact_request(@contact).deliver
+
+        # Send thank you email using ContactMailer
+        ContactMailer.thank_you(@contact).deliver
 
         format.html { redirect_to '/contact_us', notice: 'Email successfully sent.' }
         format.json { render action: 'new', status: :created, location: @contact }

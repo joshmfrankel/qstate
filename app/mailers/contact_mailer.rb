@@ -1,8 +1,17 @@
 class ContactMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "quintstateuga@gmail.com"
+
+
+  def contact_request(user)
+    @user = user
+
+    mail(to: 'meganoed01@gmail.com', subject: 'Contact form message')
+  end
 
   def thank_you(user)
-    mail(to: 'joshmfrankel@gmail.com', subject: 'Welcome to My Awesome Site')
+    @user = user
+
+    mail(to: @user.email, subject: 'Thank you for contacting the Quint State committee')
   end
 
 end
