@@ -1,0 +1,165 @@
+/**
+ * Styleguide heading mixins
+ *
+ * @author Josh Frankel <joshmfrankel@gmail.com>
+ * @params  list    A list of values to be used in the heading elements
+ *
+ * Parameter example variable. Each new line corresponds to next heading element.
+ * h1, h2, h3, etc...
+ *
+ *  $styleguide: (
+ *      (normal 600 44px 50px $font-family-sans-serif $white -15 "0 0 14px"),
+ *      (normal 600 24px 25px $font-family-sans-serif $med-blue -25 "0 0 12px"),
+ *      (normal 700 18px 25px $font-family-sans-serif $dark-blue 0 "8px 0 12px"),
+ *      (normal 600 20px 29px $font-family-sans-serif $med-alt-blue -15 "0 0 12px"),
+ *      (normal 400 18px 34px $bodyFont $dark-blue 0 "0 0 18px"),
+ *      (normal 700 14px 34px $bodyFont $dark-blue 25 "0")
+ *  );
+ */
+@mixin styleguide-headings ($styleguide) {
+    @for $i from 1 through length($styleguide) {
+        h#{$i} {
+            color: nth(nth($styleguide, $i), 6);
+            font:
+                nth(nth($styleguide, $i), 1)
+                nth(nth($styleguide, $i), 2)
+                nth(nth($styleguide, $i), 3)/#{nth(nth($styleguide, $i), 4)/nth(nth($styleguide, $i), 3)}
+                nth(nth($styleguide, $i), 5);
+            letter-spacing: letter-spacing(nth(nth($styleguide, $i), 7));
+            margin: unquote(nth(nth($styleguide, $i), 8));
+        }
+    }
+}
+
+/**
+ * Responsive Tables Mixin
+ *
+ * @author Josh Frankel <joshmfrankel@gmail.com>
+ *
+ * @param   list    $heading-list           Must be a list passed in for the alternate titles
+ * @param   string  $remove-title-selector  The selector to remove the desktop table titles
+ *
+ * @example     @include responsive-table(('Date', 'Order #', 'Total', 'Status'), 'tr:first-child');
+ *
+ * Idea from CSS-Tricks
+ */
+@mixin responsive-table ($heading-list, $remove-title-selector: 'thead tr') {
+
+    // Force table to not be like tables anymore
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+    // Remove the title headings
+    #{$remove-title-selector} {
+        position: absolute;
+        top:-9999px;
+        left: -9999px;
+    }
+
+    // Make td act like a row
+    td {
+        border:none;
+        padding-left: 50%;
+        position: relative;
+
+        // Now like a table header
+        // Top/left values mimic padding
+        &:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+        @each $current-content in $heading-list {
+            $i: index($heading-list, $current-content);
+            &:nth-of-type(#{$i}):before {
+                content: $current-content;
+            }
+        }
+    }
+}
+
+/**
+ * New Responsive Sticky Footer
+ * CSS tricks
+ *
+ */
+@mixin sticky-footer($footer-height, $container-selector, $footer-selector) {
+
+    html, body {
+        height: 100%;
+    }
+
+    #{$container-selector} {
+        min-height: 100%;
+        margin-bottom: -$footer-height;
+
+        &:after {
+            content: "";
+            display: block;
+            height: $footer-height;
+        }
+    }
+
+    #{$footer-selector} {
+        height: $footer-height;
+    }
+
+}
+
+/**
+ * Responsive Breakpoint Mixin
+ */
+@mixin breakpoint ($max-width) {
+        @media (max-width: $max-width) { @content; }
+}
+
+/**
+ * Pseudo Content Mixin
+ *
+ * Allows for easy psuedo elements
+ *
+ */
+@mixin pseudo-content ($pseudo, $url, $width, $height, $position: 0 0 no-repeat) {
+        // Make sure the parent is relative or else we will be positioning
+        // absolute for the pseudo element on the page width
+        position: relative;
+
+        &:#{$pseudo} {
+                background: url($url) $position;
+                content: '';
+                display: inline-block;
+                position: absolute;
+                height: $height;
+                width: $width;
+        }
+}
+
+/**
+ * Center element ontop of another
+ */
+@mixin center-child-img ($child-width, $child-height, $parent-width, $parent-height) {
+
+        $child-x-pos: $child-width / 2;
+        $child-y-pos: $child-height / 2;
+        $parent-x-pos: $parent-width / 2;
+        $parent-y-pos: $parent-height / 2;
+
+        $x-pos: $parent-x-pos - $child-x-pos;
+        $y-pos: $parent-y-pos - $child-y-pos;
+
+        $x-percent: ($x-pos / $parent-width) * 100;
+        $y-percent: ($y-pos / $parent-height) * 100;
+
+        left: $x-percent * 1%;
+        top: $y-percent * 1%;
+
+}

@@ -1,0 +1,15 @@
+%uga-bg-red {
+    background-color: $red;
+    color:#fff;
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}

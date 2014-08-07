@@ -34,7 +34,8 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 # Bootstrap
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'sprockets'
 
 # Encrypt

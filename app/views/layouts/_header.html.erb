@@ -1,9 +1,17 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "Quint State", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#quint-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "Quint State", root_path, id: "logo" %>
+      </div><!-- End Navbar header -->
+
+      <div class="collapse navbar-collapse" id="quint-menu">
+        <ul class="nav navbar-nav pull-right">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Proposal Submission", '/submit/proposal' %></li>
           <li><%= link_to "Registration", '/submit/registration' %></li>
@@ -11,7 +19,7 @@
           <li><%= link_to "FAQ", faq_path %></li>
           <li><%= link_to "Contact", '/contact_us' %></li>
         </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+      </div><!-- End collapse section -->
+
+    </div><!-- End container -->
+</nav><!-- End header nav -->

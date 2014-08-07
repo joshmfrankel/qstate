@@ -1,0 +1,11 @@
+.container-fluid {
+    max-width: 1170px;
+    margin:0 auto;
+    img {
+        height: auto;
+        width:100%;
+    }
+}
+
+// Sticky footer awesomeness!
+@include sticky-footer (150px, '.main-content', '.footer');

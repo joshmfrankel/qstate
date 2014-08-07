@@ -8,6 +8,16 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  */
+
+// Inlucde the core
+@import "core/styleguide.scss";
+@import "core/mixins.scss";
+@import "core/*.scss";
+
+// Bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Include the partials
+@import "partials/*";
