@@ -4,12 +4,14 @@ class ProposalsController < ApplicationController
   # GET /proposals
   # GET /proposals.json
   def index
+    redirect_if_not_signed_in
     @proposals = Proposal.all
   end
 
   # GET /proposals/1
   # GET /proposals/1.json
   def show
+    redirect_if_not_signed_in
   end
 
   # GET /proposals/new
@@ -19,6 +21,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/1/edit
   def edit
+    redirect_if_not_signed_in
   end
 
   # POST /proposals
@@ -41,6 +44,7 @@ class ProposalsController < ApplicationController
   # PATCH/PUT /proposals/1
   # PATCH/PUT /proposals/1.json
   def update
+    redirect_if_not_signed_in
     respond_to do |format|
       if @proposal.update(proposal_params)
         format.html { redirect_to @proposal, notice: 'Proposal was successfully updated.' }
@@ -55,6 +59,7 @@ class ProposalsController < ApplicationController
   # DELETE /proposals/1
   # DELETE /proposals/1.json
   def destroy
+    redirect_if_not_signed_in
     @proposal.destroy
     respond_to do |format|
       format.html { redirect_to proposals_url }

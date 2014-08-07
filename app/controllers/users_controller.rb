@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
-  def new
+  def index
+    redirect_if_not_signed_in
   end
 end

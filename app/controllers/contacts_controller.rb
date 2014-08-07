@@ -4,12 +4,14 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+      redirect_if_not_signed_in
+      @contacts = Contact.all
   end
 
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    redirect_if_not_signed_in
   end
 
   # GET /contacts/new
@@ -19,6 +21,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1/edit
   def edit
+    redirect_if_not_signed_in
   end
 
   # POST /contacts
@@ -47,6 +50,7 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
   def update
+    redirect_if_not_signed_in
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
@@ -61,6 +65,7 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+    redirect_if_not_signed_in
     @contact.destroy
     respond_to do |format|
       format.html { redirect_to contacts_url }

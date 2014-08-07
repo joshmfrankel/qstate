@@ -5,7 +5,10 @@ Qstate::Application.routes.draw do
 
   resources :registrations
 
-  get "users/new"
+  resources :sessions, only: [:new, :create, :destroy]
+
+
+  resources :users
   #get "static_pages/home"
   #get "static_pages/contact"
   #get "static_pages/faq"
@@ -19,7 +22,11 @@ Qstate::Application.routes.draw do
   match '/contact_us', to: 'contacts#new', via: 'get'
 
   # User Model
-  match '/signup', to: 'users#new', via: 'get'
+  #match '/signup', to: 'users#new', via: 'get'
+
+  # Sessions
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
   # Static Pages
   match '/faq', to: 'static_pages#faq', via: 'get'
