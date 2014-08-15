@@ -8,4 +8,12 @@
 }
 
 // Sticky footer awesomeness!
-@include sticky-footer (150px, '.main-content', '.footer');
+@include sticky-footer (45px, '.main-content', '.footer');
+
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+

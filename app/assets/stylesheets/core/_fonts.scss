@@ -1,0 +1,29 @@
+
+
+
+
+body .main-content {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $sans-serif;
+    }
+    h1,
+    h2 {
+        font-family: $roboto;
+    }
+    h1 {
+        color:$brightGray;
+        font-size: 76px;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h5 {
+        font-weight: 600;
+    }
+}

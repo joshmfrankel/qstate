@@ -3,13 +3,24 @@
  */
 
 $darkGray: #222;
+$brightGray: #373E46;
+
 /**
  * UGA Colors
  */
-$red: #CC0000;
+//$red: #CC0000;
+$red: #da3a3a;
 $black: #000;
 $gray: #999;
 
 /**
+ * Fonts
+ */
+$sans-serif: 'Open Sans', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+/**
  * Bootstrap overrides
  */
+$font-family-sans-serif: $sans-serif;
+$font-family-base: $sans-serif;

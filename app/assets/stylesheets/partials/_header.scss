@@ -1,0 +1,18 @@
+.navbar {
+
+    #logo {
+        color: #dedede;
+        font-size: 36px;
+        letter-spacing: -0.025em;
+
+        &:hover {
+            color:#efefef;
+            text-decoration: none;
+        }
+    }
+    small {
+        color: #777;
+        position: relative;
+        margin-left: 5px;
+    }
+}

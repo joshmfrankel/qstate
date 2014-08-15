@@ -1,5 +1,36 @@
+h2 {
+    margin-bottom: 20px;
+}
 .call-to-action {
     @extend %uga-bg-red;
+    padding-top:20px;
+    padding-bottom: 30px;
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .call-to-action-button-group {
+        margin-top:30px;
+        // text-align: center;
+
+        .btn-danger {
+            border-color:#c82e29;
+            font-size: 18px;
+            margin: 0 10px 0 0;
+        }
+    }
 }
 .school-information {
+    padding: 50px 0;
+
+    h2 {
+        margin-top:10px;
+    }
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    text-align: center;
 }

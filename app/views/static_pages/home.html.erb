@@ -1,8 +1,8 @@
 <div class="jumbotron">
   <div class="container-fluid">
-    <h1>Hello, world!</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    <%= image_tag "UGA/uga-arch.jpg" %>
+    <h1>Quint State</h1>
+    <h3>Southeastern Symposium on Child and Family Sciences</h3>
   </div>
 </div>
 
@@ -11,9 +11,11 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Are you ready to get involved?</h2>
-        <p>The conference of 2015 is taking place at UGA. If you are planning on attending please register below. For presentations proposals need to be submitted by 00/00/0000.</p>
-        <%= link_to "Registration", '/submit/registration', :class => 'btn btn-primary' %>
-        <%= link_to "Proposal Submission", '/submit/proposal', :class => 'btn btn-primary' %>
+        <p>Quint State is the meeting of five southeastern universites. It is a conference run by students for students. Our goal is to provide student an opportunity to polish their professional skills and find future collaborators. We will begin accepting proposals September 1st, 2014. Registration will open November 1st. We look forward to meeting with and learning from you.</p>
+        <div class="call-to-action-button-group">
+          <%= link_to "Submit a Proposal", '/submit/proposal', :class => 'btn btn-danger' %>
+          <%= link_to "Register for the Conference", '/submit/registration', :class => 'btn btn-danger' %>
+        </div>
       </div>
     </div>
   </div>
@@ -23,10 +25,9 @@
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-4"><%= image_tag "UGA/thick4c.jpg" %></div>
-        <div class="col-md-8">
-          <h3>University of Georgia</h3>
-          <h5>Human Development and Family Sciences, MFT</h5>
-          <p>Tell them about the university. Tell them about the school. What are you proud of?</p>
+        <div class="col-md-7 col-md-push-1">
+          <h2>University of Georgia</h2>
+          <h5>Department of Human Development and Family Sciences</h5>
           <a href="http://spock.fcs.uga.edu/cfd/mft/">HDFS Department</a>&nbsp;|&nbsp;<a href="http://uga.edu/">UGA Homepage</a>
         </div>
     </div>
