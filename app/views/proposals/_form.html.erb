@@ -11,29 +11,32 @@
     </div>
   <% end %>
 
+
+
+
   <div class="form-horizontal">
     <div class="field form-group">
-      <%= f.label :lead_presenter, :class => 'control-label' %><br>
+      <%= f.label :lead_presenter, :class => 'control-label' %>
       <%= f.text_field :lead_presenter, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :co_presenter, 'Co-Presenter', :class => 'control-label' %><br>
+      <%= f.label :co_presenter, 'Co-Presenter', :class => 'control-label' %>
       <%= f.text_field :co_presenter, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :email, :class => 'control-label' %><br>
+      <%= f.label :email, :class => 'control-label' %>
       <%= f.text_field :email, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :school, :class => 'control-label' %><br>
+      <%= f.label :school, :class => 'control-label' %>
       <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School', :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :credentials, :class => 'control-label' %><br>
+      <%= f.label :credentials, :class => 'control-label' %>
       <%= f.text_field :credentials, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :presentation_type, :class => 'control-label' %><br>
+      <%= f.label :presentation_type, :class => 'control-label' %>
 
       <div class="radio-inline">
         <%= f.radio_button :presentation_type, 'Roundtable' %>
@@ -48,19 +51,19 @@
       </div>
     </div>
     <div class="field form-group">
-      <%= f.label :title, :class => 'control-label' %><br>
+      <%= f.label :title, :class => 'control-label' %>
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :summary, :class => 'control-label' %><br>
+      <%= f.label :summary, :class => 'control-label' %>
       <%= f.text_area :summary, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :abstract, :class => 'control-label' %><br>
+      <%= f.label :abstract, :class => 'control-label' %>
       <%= f.text_area :abstract, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :additional_information, :class => 'control-label' %><br>
+      <%= f.label :additional_information, :class => 'control-label' %>
       <%= f.text_area :additional_information, :class => 'form-control' %>
     </div>
     <div class="actions">
@@ -68,3 +71,5 @@
     </div>
   </div>
 <% end %>
+
+

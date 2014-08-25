@@ -11,58 +11,60 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :school %><br>
-    <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School' %>
-  </div>
-  <div class="field">
-    <%= f.label :presenter %><br>
-    <%= f.radio_button :presenter, true %>
-    <%= f.radio_button :presenter, false %>
-  </div>
-  <div class="field">
-    <%= f.label :allergies %><br>
-    <%= f.text_field :allergies %>
-  </div>
-  <div class="field">
-    <%= f.label :days_attending %><br>
-    <%= f.text_field :days_attending %>
-  </div>
-  <div class="field">
-    <%= f.label :housing_needed %><br>
-    <%= f.radio_button :housing_needed, true %>
-    <%= f.radio_button :housing_needed, false %>
-  </div>
-  <div class="field">
-    <%= f.label :animal_allergies %><br>
-    <%= f.text_field :animal_allergies %>
-  </div>
-  <div class="field">
-    <%= f.label :smoking %><br>
-    <%= f.radio_button :smoking, true %>
-    <%= f.radio_button :smoking, false %>
-  </div>
-  <div class="field">
-    <%= f.label :housing_residents %><br>
-    <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], :prompt => 'Choose Housing Residents' %>
-  </div>
-  <div class="field">
-    <%= f.label :housing_sleep_situation, 'Preferred Sleeping Arrangements' %><br>
-    <%= f.select :housing_sleep_situation, [ 'No Preference', 'Bed', 'Futon', 'Floor' ], :prompt => 'Choose Sleep Situation' %>
-  </div>
-  <div class="field">
-    <%= f.label :additional_information %><br>
-    <%= f.text_area :additional_information %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="form-horizontal">
+      <div class="field form-group">
+        <%= f.label :name, :class => 'control-label' %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :email, :class => 'control-label' %>
+        <%= f.text_field :email, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :school, :class => 'control-label' %>
+        <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School', :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :presenter, :class => 'control-label' %>
+        <%= f.radio_button :presenter, true %>
+        <%= f.radio_button :presenter, false %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :allergies, :class => 'control-label' %>
+        <%= f.text_field :allergies, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :days_attending, :class => 'control-label' %>
+        <%= f.text_field :days_attending, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :housing_needed, :class => 'control-label' %>
+        <%= f.radio_button :housing_needed, true %>
+        <%= f.radio_button :housing_needed, false %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :animal_allergies, :class => 'control-label' %>
+        <%= f.text_field :animal_allergies, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :smoking, :class => 'control-label' %>
+        <%= f.radio_button :smoking, true %>
+        <%= f.radio_button :smoking, false %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :housing_residents, :class => 'control-label' %>
+        <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], :prompt => 'Choose Housing Residents', :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :housing_sleep_situation, 'Preferred Sleeping Arrangements', :class => 'control-label' %>
+        <%= f.select :housing_sleep_situation, [ 'No Preference', 'Bed', 'Futon', 'Floor' ], :prompt => 'Choose Sleep Situation', :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :additional_information, :class => 'control-label' %>
+        <%= f.text_area :additional_information, :class => 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
 <% end %>
