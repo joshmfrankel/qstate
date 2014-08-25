@@ -1,0 +1,10 @@
+.form-horizontal {
+    label {
+        @extend .col-sm-2;
+    }
+    input,
+    textarea,
+    select {
+        @extend .col-sm-6;
+    }
+}

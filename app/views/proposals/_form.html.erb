@@ -11,49 +11,60 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :lead_presenter %><br>
-    <%= f.text_field :lead_presenter %>
-  </div>
-  <div class="field">
-    <%= f.label :co_presenter, 'Co-Presenter' %><br>
-    <%= f.text_field :co_presenter %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :school %><br>
-    <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School' %>
-  </div>
-  <div class="field">
-    <%= f.label :credentials %><br>
-    <%= f.text_field :credentials %>
-  </div>
-  <div class="field">
-    <%= f.label :presentation_type %><br>
-    <%= f.radio_button :presentation_type, 'Roundtable' %>
-    <%= f.radio_button :presentation_type, 'Poster' %>
-    <%= f.radio_button :presentation_type, 'Presentation' %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_area :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :abstract %><br>
-    <%= f.text_area :abstract %>
-  </div>
-  <div class="field">
-    <%= f.label :additional_information %><br>
-    <%= f.text_area :additional_information %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-horizontal">
+    <div class="field form-group">
+      <%= f.label :lead_presenter, :class => 'control-label' %><br>
+      <%= f.text_field :lead_presenter, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :co_presenter, 'Co-Presenter', :class => 'control-label' %><br>
+      <%= f.text_field :co_presenter, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :email, :class => 'control-label' %><br>
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :school, :class => 'control-label' %><br>
+      <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School', :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :credentials, :class => 'control-label' %><br>
+      <%= f.text_field :credentials, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :presentation_type, :class => 'control-label' %><br>
+
+      <div class="radio-inline">
+        <%= f.radio_button :presentation_type, 'Roundtable' %>
+      </div>
+
+      <div class="radio-inline">
+        <%= f.radio_button :presentation_type, 'Poster' %>
+      </div>
+
+      <div class="radio-inline">
+        <%= f.radio_button :presentation_type, 'Presentation' %>
+      </div>
+    </div>
+    <div class="field form-group">
+      <%= f.label :title, :class => 'control-label' %><br>
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :summary, :class => 'control-label' %><br>
+      <%= f.text_area :summary, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :abstract, :class => 'control-label' %><br>
+      <%= f.text_area :abstract, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :additional_information, :class => 'control-label' %><br>
+      <%= f.text_area :additional_information, :class => 'form-control' %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>

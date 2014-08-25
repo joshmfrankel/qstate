@@ -17,3 +17,9 @@ a {
     }
 }
 
+.main-content {
+    background-color: #eee;
+    > .container-fluid {
+        margin-top:50px;
+    }
+}
