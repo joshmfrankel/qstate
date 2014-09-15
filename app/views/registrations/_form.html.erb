@@ -22,12 +22,19 @@
       </div>
       <div class="field form-group">
         <%= f.label :school, :class => 'control-label' %>
-        <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], :prompt => 'Choose a School', :class => 'form-control' %>
+        <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina (filler)' ], { :prompt => 'Choose a School' }, :class => 'form-control' %>
       </div>
       <div class="field form-group">
         <%= f.label :presenter, :class => 'control-label' %>
-        <%= f.radio_button :presenter, true %>
-        <%= f.radio_button :presenter, false %>
+
+        <label class="radio-inline">
+          <%= f.radio_button :presenter, true %> Yes
+        </label>
+
+        <label class="radio-inline">
+          <%= f.radio_button :presenter, false %> No
+        </label>
+
       </div>
       <div class="field form-group">
         <%= f.label :allergies, :class => 'control-label' %>
@@ -39,8 +46,15 @@
       </div>
       <div class="field form-group">
         <%= f.label :housing_needed, :class => 'control-label' %>
-        <%= f.radio_button :housing_needed, true %>
-        <%= f.radio_button :housing_needed, false %>
+
+        <label class="radio-inline">
+          <%= f.radio_button :housing_needed, true %>Yes
+        </label>
+
+        <label class="radio-inline">
+          <%= f.radio_button :housing_needed, false %>No
+        </label>
+
       </div>
       <div class="field form-group">
         <%= f.label :animal_allergies, :class => 'control-label' %>
@@ -48,23 +62,29 @@
       </div>
       <div class="field form-group">
         <%= f.label :smoking, :class => 'control-label' %>
-        <%= f.radio_button :smoking, true %>
-        <%= f.radio_button :smoking, false %>
+
+        <label class="radio-inline">
+          <%= f.radio_button :smoking, true %>Yes
+        </label>
+
+        <label class="radio-inline">
+          <%= f.radio_button :smoking, false %>No
+        </label>
       </div>
       <div class="field form-group">
         <%= f.label :housing_residents, :class => 'control-label' %>
-        <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], :prompt => 'Choose Housing Residents', :class => 'form-control' %>
+        <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], { :prompt => 'Choose Housing Residents' }, :class => 'form-control' %>
       </div>
       <div class="field form-group">
         <%= f.label :housing_sleep_situation, 'Preferred Sleeping Arrangements', :class => 'control-label' %>
-        <%= f.select :housing_sleep_situation, [ 'No Preference', 'Bed', 'Futon', 'Floor' ], :prompt => 'Choose Sleep Situation', :class => 'form-control' %>
+        <%= f.select :housing_sleep_situation, [ 'No Preference', 'Bed', 'Futon', 'Floor' ], { :prompt => 'Choose Sleep Situation' }, :class => 'form-control' %>
       </div>
       <div class="field form-group">
         <%= f.label :additional_information, :class => 'control-label' %>
         <%= f.text_area :additional_information, :class => 'form-control' %>
       </div>
       <div class="actions">
-        <%= f.submit %>
+        <%= f.submit 'Register', :class => 'btn btn-default' %>
       </div>
     </div>
 <% end %>

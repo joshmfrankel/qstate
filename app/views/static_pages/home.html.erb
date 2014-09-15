@@ -1,20 +1,22 @@
 <div class="jumbotron">
-  <div class="container-fluid">
+  <div class="container">
     <%= image_tag "UGA/uga-arch.jpg" %>
-    <h1>Quint State</h1>
-    <h3>Southeastern Symposium on Child and Family Sciences</h3>
+    <div class="jumbotron-headline">
+      <h1>Quint State</h1>
+      <h3>Southeastern Symposium on Child and Family Sciences</h3>
+    </div>
   </div>
 </div>
 
 <div class="call-to-action">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Are you ready to get involved?</h2>
+        <h2 class="text-center">Are you ready to get involved?</h2>
         <p>Quint State is the meeting of five southeastern universites. It is a conference run by students for students. Our goal is to provide student an opportunity to polish their professional skills and find future collaborators. We will begin accepting proposals September 1st, 2014. Registration will open November 1st. We look forward to meeting with and learning from you.</p>
         <div class="call-to-action-button-group">
           <%= link_to "Submit a Proposal", '/submit/proposal', :class => 'btn btn-danger' %>
-          <%= link_to "Register for the Conference", '/submit/registration', :class => 'btn btn-danger' %>
+          <%= link_to "Register for the Conference", '/submit/registration', :class => 'btn btn-danger', "disabled" => "disabled", "title" => 'Registration will open November 1st' %>
         </div>
       </div>
     </div>
@@ -22,7 +24,7 @@
 </div>
 
 <div class="school-information">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
         <div class="col-md-4"><%= image_tag "UGA/thick4c.jpg" %></div>
         <div class="col-md-7 col-md-push-1">

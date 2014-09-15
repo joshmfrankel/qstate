@@ -11,8 +11,13 @@
         }
     }
     small {
-        color: #777;
+        color: #a9a9a9;
         position: relative;
         margin-left: 5px;
+    }
+    .nav {
+        li a {
+            color: #a9a9a9;
+        }
     }
 }

@@ -11,19 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :questions %><br>
-    <%= f.text_area :questions %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Send Message' %>
+  <div class="form-horizontal">
+    <div class="field form-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :email, :class => 'control-label' %>
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :questions, :class => 'control-label' %>
+      <%= f.text_area :questions, :class => 'form-control' %>
+    </div>
+    <div class="actions form-group">
+      <%= f.submit 'Send Message', :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
