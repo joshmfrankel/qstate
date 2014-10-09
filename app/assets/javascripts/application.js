@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+    $('#proposal_summary').change(function(e) {
+        //var wordCount = e.val().split(' ');
+
+        var text = $('#proposal_summary').val();
+        var wordCount = text.split(' ');
+
+        if (wordCount.length > 50) {
+            //.val(text)
+            wordCount.splice(50);
+            $('#proposal_summary').val(wordCount.join(" "));
+        }
+
+    });
+});

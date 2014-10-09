@@ -1,6 +1,6 @@
 <%= form_for(@proposal) do |f| %>
   <% if @proposal.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger" role="alert">
       <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
 
       <ul>
@@ -55,11 +55,11 @@
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :summary, :class => 'control-label' %>
+      <%= f.label :summary, 'Summary<br /><small>(50 word max)</small>'.html_safe, :class => 'control-label' %>
       <%= f.text_area :summary, :class => 'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :abstract, :class => 'control-label' %>
+      <%= f.label :abstract, 'Abstract<br /><small>(200 word max)</small>'.html_safe, :class => 'control-label' %>
       <%= f.text_area :abstract, :class => 'form-control' %>
     </div>
     <div class="field form-group">
@@ -67,7 +67,7 @@
       <%= f.text_area :additional_information, :class => 'form-control' %>
     </div>
     <div class="actions form-group">
-      <%= f.submit 'Submit Proposal', :class => 'btn btn-default' %>
+      <%= f.submit 'Submit Proposal', :class => 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
