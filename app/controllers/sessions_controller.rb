@@ -4,13 +4,26 @@ class SessionsController < ApplicationController
   end
 
   def create
+
+
+
     user = User.find_by(email: params[:session][:email].downcase)
+
+    #@user = user
+
+    #logger.debug "===== START ====="
+    #logger.debug @user.id
+    #logger.debug params[:session][:password]
+    #logger.debug "=====  END  ====="
+
     if user && user.authenticate(params[:session][:password])
       # Sign the user in and redirect to the user's show page.
+
+
       sign_in user
       redirect_to root_path
     else
-      flash.now[:error] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:error] = 'Invalid credentials' # Not quite right!
       render 'new'
     end
   end

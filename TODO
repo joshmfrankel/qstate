@@ -36,13 +36,13 @@ Features:
    ✔ Abstract (textarea) @done (14-08-02 12:24)
    ✔ Additional Information (textarea) @done (14-08-02 12:24)
 
- ☐ Conference Schedule
+ ✔ Conference Schedule @done (14-09-15 18:35)
    ☐ Basic - PDF link opens in Browser
    ☐ Ideal - HTML table schedule that josh makes
    ☐ (wont be available Jan 2015)
 
- ☐ FAQ
-   ☐ Toggle sections
+ ✔ FAQ @done (14-09-15 18:35)
+   ✔ Toggle sections @done (14-09-15 18:35)
 
  ☐ Blog
 
@@ -51,5 +51,6 @@ Features:
    ✔ Email @done (14-08-02 14:01)
    ✔ Questions / Concerns @done (14-08-02 14:01)
 
-
+ ☐ quintstateuga@gmail.com
  ☐ mft-811 (DB pass)
+ ☐ rake assets:precompile

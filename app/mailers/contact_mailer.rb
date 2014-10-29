@@ -14,4 +14,5 @@ class ContactMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Thank you for contacting the Quint State committee')
   end
 
+
 end
