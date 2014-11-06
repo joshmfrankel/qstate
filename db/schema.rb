@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807204820) do
+ActiveRecord::Schema.define(version: 20141106022517) do
 
   create_table "contacts", force: true do |t|
     t.string   "name",       limit: 50
@@ -45,12 +45,16 @@ ActiveRecord::Schema.define(version: 20140807204820) do
     t.string   "days_attending"
     t.boolean  "housing_needed"
     t.string   "animal_allergies"
-    t.boolean  "smoking"
     t.string   "housing_residents"
     t.string   "housing_sleep_situation"
     t.text     "additional_information"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone"
+    t.boolean  "comfortable_dogs"
+    t.boolean  "comfortable_cats"
+    t.boolean  "comfortable_kids"
+    t.boolean  "comfortable_smoking"
   end
 
   create_table "users", force: true do |t|

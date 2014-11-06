@@ -25,6 +25,10 @@
         <%= f.select :school, [ 'University of Georgia', 'Virginia Tech', 'Auburn University', 'University of Tennessee', 'University of North Carolina Greensboro' ], { :prompt => 'Choose a School' }, :class => 'form-control' %>
       </div>
       <div class="field form-group">
+        <%= f.label :phone, :class => 'control-label' %>
+        <%= f.text_field :phone, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
         <%= f.label :presenter, :class => 'control-label' %>
 
         <label class="radio-inline">
@@ -60,17 +64,28 @@
         <%= f.label :animal_allergies, :class => 'control-label' %>
         <%= f.text_field :animal_allergies, :class => 'form-control' %>
       </div>
+
       <div class="field form-group">
-        <%= f.label :smoking, :class => 'control-label' %>
+        <%= f.label :comfortable_dogs, "I'm comfortable staying with", :class => 'control-label' %>
 
-        <label class="radio-inline">
-          <%= f.radio_button :smoking, true %>Yes
+        <label class="checkbox-inline">
+          <%= f.check_box :comfortable_dogs %>Dogs
         </label>
 
-        <label class="radio-inline">
-          <%= f.radio_button :smoking, false %>No
+        <label class="checkbox-inline">
+          <%= f.check_box :comfortable_cats %>Cats
         </label>
+
+        <label class="checkbox-inline">
+          <%= f.check_box :comfortable_kids %>Kids
+        </label>
+
+        <label class="checkbox-inline">
+          <%= f.check_box :comfortable_smoking %>Smoking
+        </label>
+
       </div>
+
       <div class="field form-group">
         <%= f.label :housing_residents, :class => 'control-label' %>
         <%= f.select :housing_residents, [ 'Female Resident', 'Male Resident', 'Couple Residents' ], { :prompt => 'Choose Housing Residents' }, :class => 'form-control' %>

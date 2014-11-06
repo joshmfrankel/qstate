@@ -5,7 +5,7 @@ class ContactMailer < ActionMailer::Base
   def contact_request(user)
     @user = user
 
-    mail(to: 'meganoed01@gmail.com', subject: 'Contact form message')
+    mail(to: 'quintstateuga@gmail.com', subject: 'Contact form message')
   end
 
   def thank_you(user)

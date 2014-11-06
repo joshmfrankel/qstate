@@ -7,12 +7,14 @@
     select {
         @extend .col-sm-6;
     }
-    .radio-inline {
+    .radio-inline,
+    .checkbox-inline {
         margin-bottom: 15px;
         text-align: left;
         width:auto;
     }
-    input[type=radio] {
+    input[type=radio],
+    input[type=checkbox] {
         left: 15px;
         width: 20px;
     }

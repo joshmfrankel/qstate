@@ -74,6 +74,6 @@ class RegistrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registration_params
-      params.require(:registration).permit(:name, :email, :school, :presenter, :allergies, :days_attending, :housing_needed, :animal_allergies, :smoking, :housing_residents, :housing_sleep_situation, :additional_information)
+      params.require(:registration).permit(:name, :email, :school, :phone, :presenter, :allergies, :days_attending, :housing_needed, :animal_allergies, :smoking, :housing_residents, :housing_sleep_situation, :additional_information, :comfortable_dogs, :comfortable_cats, :comfortable_kids, :comfortable_smoking)
     end
 end
