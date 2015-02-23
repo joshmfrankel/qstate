@@ -20,4 +20,12 @@ class StaticPagesController < ApplicationController
 
   def registration
   end
+
+  def download
+    send_file(
+      "#{Rails.root}/public/docs/quint-state-program.pdf",
+      filename: "quint-state-program.pdf",
+      type: "application/pdf"
+    )
+  end
 end
