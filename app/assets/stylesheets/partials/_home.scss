@@ -50,3 +50,11 @@ h2 {
         }
     }
 }
+.red-link {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    &:hover {
+        color: #ddd;
+        text-decoration: none;
+    }
+}
