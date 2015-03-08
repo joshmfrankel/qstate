@@ -1,6 +1,10 @@
 # Quint State Website  
 
-A ruby on rails website for the 2014 MFT Quint State conference.
+A ruby on rails website for the 2014 MFT Quint State conference. 
+
+## Status  
+
+Completed!
 
 ## Server Info  
 
@@ -17,8 +21,6 @@ A ruby on rails website for the 2014 MFT Quint State conference.
 * FAQ jQuery/CSS3 section
 
 * Schedule page
-
-* Slideshow homepage
 
 * Bootstrap grid
 
